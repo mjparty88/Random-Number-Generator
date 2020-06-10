@@ -10,7 +10,7 @@ project 1 - A Random Quote Generator
 /***
  * `quotes` array
 ***/
-let quotesArray = [
+let quotes = [
   {
     quote: 'The greatest glory in living lies not in never falling, but in rising every time we fall',
     source: 'Nelson Mandela, Conficious, and others',
@@ -65,7 +65,7 @@ let quotesArray = [
 
 
 /***
- * `getRandomQuote` function created with propArray parameters, intended for calling with quotesArray args.
+ * `getRandomQuote` function created with propArray parameters, intended for calling with quotes args.
 ***/
 
 function getRandomQuote(propArray) {
@@ -78,8 +78,8 @@ function getRandomQuote(propArray) {
 ***/
 
 function printQuote() {
-  //call getRandomQuote passing it the quotesArray arguement
-  let randomQuote = getRandomQuote(quotesArray)
+  //call getRandomQuote passing it the quote arguement
+  let randomQuote = getRandomQuote(quotes)
   //use the returned quote to build a string of HTML and quote properties
   let randomQuoteString = `<p class="quote">${randomQuote.quote}</p><p class="source">${randomQuote.source}`;
   if(randomQuote.citation !== undefined){
